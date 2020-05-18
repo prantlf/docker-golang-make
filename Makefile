@@ -11,7 +11,7 @@ build ::
 	docker build -t golang-make .
 
 run ::
-	docker run --rm -t -i golang-make busybox sh
+	docker run --rm -t -i golang-make
 
 tag ::
 	docker tag golang-make prantlf/golang-make:latest
