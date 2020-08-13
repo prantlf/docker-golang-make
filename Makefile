@@ -10,8 +10,11 @@ lint ::
 build ::
 	docker build -t golang-make .
 
+shell ::
+	docker run --rm -it --entrypoint=busybox golang-make sh
+
 run ::
-	docker run --rm -t -i golang-make
+	docker run --rm -it golang-make
 
 tag ::
 	docker tag golang-make prantlf/golang-make:latest

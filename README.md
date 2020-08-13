@@ -45,6 +45,10 @@ Build a new local image:
 
 Enter an interactive shell inside the created image:
 
+    make shell
+
+Run make using the created image:
+
     make run
 
 Tag the local image for pushing:
