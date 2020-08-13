@@ -16,11 +16,14 @@ If you need to install some global dependencies, which `go build` does not du au
 ## Tags
 
 - [`latest`]
+- `1.14`
 
 ## Install
 
 ```
 docker pull prantlf/golang-make
+# or a specific tag
+docker pull prantlf/golang-make:1.14
 ```
 
 ## Use
@@ -39,11 +42,11 @@ Check the `Dockerfile`:
 
     make lint
 
-Build a new local image:
+Build new local images and tag them:
 
     make build
 
-Enter an interactive shell inside the created image:
+Enter an interactive shell inside the latest created image:
 
     make shell
 
@@ -51,15 +54,11 @@ Run make using the created image:
 
     make run
 
-Tag the local image for pushing:
-
-    make tag
-
 Login to the docker hub:
 
     make login
 
-Push the local image to the docker hub:
+Push the local images to the docker hub:
 
     make push
 
