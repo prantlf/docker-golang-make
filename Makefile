@@ -31,13 +31,11 @@ define push_image
 endef
 
 ifeq ($(VERSION),)
-  VERSION=latest
+	VERSION=latest
 endif
 
 clean ::
-	$(call rm_image,1.14) || $(call rm_image,1.15) || $(call rm_image,latest)
-	$(call rm_image,1.15) || $(call rm_image,latest)
-	$(call rm_image,latest)
+	$(call rm_image,1.14) ; $(call rm_image,1.15) ; $(call rm_image,latest)
 
 pull ::
 	$(call pull_image,1.14-alpine)
