@@ -35,31 +35,21 @@ ifeq ($(VERSION),)
 endif
 
 clean ::
-	$(call rm_image,1.14) ; $(call rm_image,1.15) ; $(call rm_image,latest)
+	$(call rm_image,latest)
 
 pull ::
-	$(call pull_image,1.14-alpine)
-	$(call pull_image,1.15-alpine)
 	$(call pull_image,alpine)
 
 lint ::
-	$(call lint_dockerfile,Dockerfile.1.14)
-	$(call lint_dockerfile,Dockerfile.1.15)
 	$(call lint_dockerfile,Dockerfile)
 
 build ::
-	$(call build_image,Dockerfile.1.14,1.14)
-	$(call build_image,Dockerfile.1.15,1.15)
 	$(call build_image,Dockerfile,latest)
 
 test ::
-	$(call test_container,1.14)
-	$(call test_container,1.15)
 	$(call test_container,latest)
 
 tag ::
-	$(call tag_image,1.14)
-	$(call tag_image,1.15)
 	$(call tag_image,latest)
 
 echo ::
@@ -75,6 +65,4 @@ login ::
 	docker login --username=prantlf
 
 push ::
-	$(call push_image,1.14)
-	$(call push_image,1.15)
 	$(call push_image,latest)
