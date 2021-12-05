@@ -8,9 +8,7 @@
 
 ## Tags
 
-- [`latest`]  (`1.15`)
-- `1.15`
-- `1.14`
+- [`latest`], `1.17`, `1.16`, `1.15`, `1.14`
 
 ## Install
 
@@ -54,7 +52,7 @@ The local images are built as `golang-make` with the appropriate tags and pushed
 
 ## License
 
-Copyright (c) 2020 Ferdinand Prantl
+Copyright (c) 2020-2021 Ferdinand Prantl
 
 Licensed under the MIT license.
 
