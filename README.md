@@ -2,15 +2,13 @@
 
 [Docker] image: Go language on Alpine Linux with Make
 
-[![prantlf/golang-make](http://dockeri.co/image/prantlf/golang-make)](https://hub.docker.com/repository/docker/prantlf/golang-make/)
-
 [This image] is supposed to build and test applications written in [Go]. They often use `make` as a build tool, which is added by this image. This image is built automatically on the top of the tag [`alpine`] from the [golang repository], so that it always runs the current version of [Go] in the latest [Alpine Linux]. [Make] has to be updated from time to time by triggering a new build manually.
 
 If you have trouble pulling the image from the Docker's default hub.docker.com, try gitlab.com, where [this project] is primarily maintained: `registry.gitlab.com/prantlf/docker-golang-make`.
 
 ## Tags
 
-- [`latest`], `1.17`, `1.16`, `1.15`, `1.14`
+- [`latest`], `1.19`, `1.17`, `1.16`, `1.15`, `1.14`
 
 ## Install
 
@@ -45,8 +43,6 @@ The local images are built as `golang-make` with the appropriate tags and pushed
     make shell VERSION=latest
     # run make using the created image
     make run VERSION=latest
-    # tag the local images tor upload
-    make tag
     # login to the docker hub
     make login
     # push the local images to the docker hub
