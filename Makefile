@@ -35,6 +35,8 @@ ifeq ($(VERSION),)
 	VERSION=latest
 endif
 
+all :: lint build
+
 clean ::
 	$(call rm_image,latest)
 
